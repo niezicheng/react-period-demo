@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Space } from 'antd';
-import PeriodChild from '../periodChild';
-import OldPeriodChild from '../oldPeriodChild';
+import PeriodChild from './periodChild';
+import OldPeriodChild from './oldPeriodChild';
 
 class Period extends React.PureComponent {
   constructor(props) {
