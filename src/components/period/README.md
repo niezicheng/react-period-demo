@@ -40,8 +40,8 @@
 > 	返回新的 state 对象或 null
 > **说明**
 > - 函数内部不能访问 this 对象，即无法获取 this.state 和 this.props
->	- 在挂载时接受到新的 props，组件内调用 setState 和 forceUpdate 也会调用
->	- 取代旧生命周期的 componentWillMount、componentWillReceiveProps、componentWillUpdate
+> - 在挂载时接受到新的 props，组件内调用 setState 和 forceUpdate 也会调用
+> - 取代旧生命周期的 componentWillMount、componentWillReceiveProps、componentWillUpdate
 
 #####  `render`
 
@@ -63,8 +63,8 @@
 >		false: 不更新渲染
 > **说明**
 > - 在挂载时接受到新的 props，组件内调用 setState 和 forceUpdate 也会调用
->	- 返回 false 并不会阻止子组件在 state 更改时重新渲染
->	- 不建议在 shouldComponentUpdate() 中进行深层比较或使用 JSON.stringify()。这样非常影响效率，且会损害性能
+> - 返回 false 并不会阻止子组件在 state 更改时重新渲染
+> - 不建议在 shouldComponentUpdate() 中进行深层比较或使用 JSON.stringify()。这样非常影响效率，且会损害性能
 
 #####  `render`
 
@@ -88,8 +88,8 @@
 >		snapshot：getSnapshotBeforeUpdate周期函数的返回值, 默认值为 undefined
 > **说明**
 > - 可以操作DOM，和发起服务器请求，还可以setState
->	- 注意一定要用if语句控制，否则会导致无限循环
->	- 当 shouldComponentUpdate 返回值为 false时，不会调用该周期函数
+> - 注意一定要用if语句控制，否则会导致无限循环
+> - 当 shouldComponentUpdate 返回值为 false时，不会调用该周期函数
 
 
 #### 卸载阶段
@@ -99,7 +99,7 @@
 >
 > **说明**
 > - 主要用于清楚一些定时器，取消网络请求，清理无效的DOM元素等垃圾清理工作
->	- 在该函数内调用 setState 方法，组件不会再进行重新渲染
+> - 在该函数内调用 setState 方法，组件不会再进行重新渲染
 
 
 ### 旧生命周期
@@ -129,7 +129,7 @@
 > **说明**
 > - 一般通过比较 nextProps 和 this.props 值然后使用 setState 方法对 state 进行更新控制处理
 > - 父组件重新渲染，props 值不变时仍然会触发调用该周期函数
->	- 装载阶段【挂载阶段】不会触发，以及在组件内部调用了 setState 和 forceUpdate 也不会触发这两个函数
+> - 装载阶段【挂载阶段】不会触发，以及在组件内部调用了 setState 和 forceUpdate 也不会触发这两个函数
 
 
 #####  `shouldComponentUpdate`
