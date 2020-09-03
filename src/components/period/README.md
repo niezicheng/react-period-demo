@@ -104,6 +104,10 @@
 
 ### 旧生命周期
 
+如下图所示：
+
+![React16旧生命周期图](https://user-gold-cdn.xitu.io/2018/8/12/1652a030ed1506e0?imageslim)
+
 #### 挂载阶段
 
 #####  `construct`
@@ -154,3 +158,14 @@
 ####  `componentWillUnmount`
 
 [官网地址](https://reactjs.bootcss.com/docs/react-component.html#static-getderivedstatefromprops)
+
+
+## React 底层进行等一下相关操作简单说明
+1. reconciliation(调和阶段)
+2. rendering(渲染阶段)
+
+> - 调和阶段
+> 组件 --> render() 方法 --> 生成新的 VirtualDOM --> 比较新旧 VirtualDOM --> 得到新的 VirtualDOM --> 进行 rendering(渲染阶段)
+> **真实的DOM生成：**JSX --> createElement() --> js 对象(VirtualDOM) --> 真实的 DOM
+> - 渲染阶段
+> 将 VirtualDOM 转化为相对应的 DOM 操作 --> 更新页面
