@@ -1,8 +1,29 @@
 ## React 新旧生命周期
 
+## 目录
+- [新生命周期](#新生命周期)
+  - [新生命周期图](#新生命周期图)
+  - [后面17中即将废弃的三个生命周期](#后面17中即将废弃的三个生命周期)
+  - [挂载阶段](#挂载阶段)
+    - [construct](#construct)
+    - [getDerivedStateFromProps](#getDerivedStateFromProps)
+    - [render](#render)
+    - [componentDidMount](#componentDidMount)
+  - [更新阶段](#更新阶段)
+    - [getDerivedStateFromProps](#getDerivedStateFromProps)
+    - [shouldComponentUpdate](#shouldComponentUpdate)
+    - [render](#render)
+    - [getSnapshotBeforeUpdate](getSnapshotBeforeUpdate)
+    - [componentDidUpdate](#componentDidUpdate)
+  - [卸载阶段](#卸载阶段)
+    - [componentWillUnmount](#componentWillUnmount)
+
+- [旧生命周期](#旧生命周期)
+  - [旧生命周期图](#旧生命周期图)
+
 ### 新生命周期
 
-如下图所示：
+#### 新生命周期图
 
 ![React16新生命周期图](https://user-gold-cdn.xitu.io/2018/8/12/1652a030ed1506e0?imageslim)
 
@@ -104,7 +125,7 @@
 
 ### 旧生命周期
 
-如下图所示：
+#### 旧生命周期图
 
 ![React16旧生命周期图](https://user-gold-cdn.xitu.io/2018/8/12/1652a030ed1506e0?imageslim)
 
